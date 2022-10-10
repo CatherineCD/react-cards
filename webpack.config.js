@@ -14,6 +14,27 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+              implementation: require.resolve("sass"),
+            },
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              hoistUseStatements: true,
+              resources: 'src/theme/base/variables.scss'
+            }
+          },
+        ],
+      },
     ],
   },
   resolve: {
