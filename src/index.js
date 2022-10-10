@@ -6,9 +6,9 @@ import {
   Route,
 } from "react-router-dom";
 import App from "./App";
-import CardInfo from "./pages/CardInfo";
-import CardList from "./pages/CardList";
-import NewCard from "./pages/NewCard";
+import CardInfo from "./pages/card-info";
+import CardList from "./pages/card-list";
+import NewCard from "./pages/new-card";
 
 const router = createBrowserRouter([
   {
