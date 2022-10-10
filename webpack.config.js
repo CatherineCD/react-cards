@@ -22,23 +22,23 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true,
-              implementation: require.resolve("sass"),
+              // Prefer `dart-sass`
+              implementation: require("sass"),
             },
           },
-          {
-            loader: 'sass-resources-loader',
-            options: {
-              hoistUseStatements: true,
-              resources: 'src/theme/base/variables.scss'
-            }
-          },
+          // {
+          //   loader: 'sass-resources-loader',
+          //   options: {
+          //     hoistUseStatements: true,
+          //     resources: 'src/theme/base/variables.scss'
+          //   }
+          // },
         ],
       },
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ['.jsx', '.js', '.scss', '.css'],
   },
   devServer: {
     static: {
